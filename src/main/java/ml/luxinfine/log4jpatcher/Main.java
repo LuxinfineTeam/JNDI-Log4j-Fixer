@@ -101,6 +101,7 @@ public class Main {
             Files.copy(zipFilePath, result);
             try (FileSystem fs = FileSystems.newFileSystem(result, null)) {
                 Path target = fs.getPath("/org/apache/logging/log4j/core/lookup/Interpolator.class");
+                Files.delete(target);
                 Files.write(target, bytecode);
                 System.out.println("The patch was successful!");
             } catch (Throwable throwable) {
