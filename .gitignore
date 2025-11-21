@@ -1,0 +1,11 @@
+.env
+.png_compress_cache
+.gradle
+/.settings
+/bin
+.classpath
+.project
+.idea/
+/run/
+/build/
+/eclipse/
